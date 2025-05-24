@@ -58,8 +58,10 @@ dropdownList.addEventListener('click', (e) => {
 
         if (selectedRegion === clickedRegion) {
             selectedRegion = '';
+            dropdown.textContent = 'Filter by Region';
         } else {
             selectedRegion = clickedRegion;
+            dropdown.textContent = clickedRegion;
         }
 
         dropdownList.querySelectorAll('li').forEach(li => {
