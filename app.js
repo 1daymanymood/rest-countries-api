@@ -58,10 +58,10 @@ dropdownList.addEventListener('click', (e) => {
 
         if (selectedRegion === clickedRegion) {
             selectedRegion = '';
-            dropdown.textContent = 'Filter by Region';
+            dropdown.innerHTML = `Filter by Region <span><i class="fa-solid fa-angle-down"></i></span>`;
         } else {
             selectedRegion = clickedRegion;
-            dropdown.textContent = clickedRegion;
+            dropdown.innerHTML = `${clickedRegion} <span><i class="fa-solid fa-angle-down"></i></span>`;
         }
 
         dropdownList.querySelectorAll('li').forEach(li => {
